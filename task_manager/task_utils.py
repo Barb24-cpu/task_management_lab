@@ -12,7 +12,6 @@ tasks = []
 
 # Implement add_task function
 def add_task(title, description, due_date):
-   def add_task(title, description, due_date):
     if not validate_task_title(title) or not validate_task_description(description) or not validate_due_date(due_date):
         print("Validation failed. Task not added.")
         return False
@@ -26,10 +25,9 @@ def add_task(title, description, due_date):
     tasks.append(task)
     print("Task added successfully!")
     return True
-    
+
 # Implement mark_task_as_complete function
 def mark_task_as_complete(index, tasks=tasks):
-   def mark_task_as_complete(index, tasks=tasks):
     try:
         idx = int(index) - 1
         if 0 <= idx < len(tasks):
@@ -42,10 +40,10 @@ def mark_task_as_complete(index, tasks=tasks):
     except ValueError:
         print("Invalid index entered.")
         return False
-    
+
 # Implement view_pending_tasks function
 def view_pending_tasks(tasks=tasks):
-   pending = [t for t in tasks if not t["completed"]]
+    pending = [t for t in tasks if not t["completed"]]
     if not pending:
         print("No pending tasks.")
     else:
@@ -55,7 +53,7 @@ def view_pending_tasks(tasks=tasks):
 
 # Implement calculate_progress function
 def calculate_progress(tasks=tasks):
-  if not tasks:
+    if not tasks:
         print("No tasks available.")
         return 0.0
     completed = sum(1 for t in tasks if t["completed"])

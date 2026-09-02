@@ -18,12 +18,12 @@ def main():
         choice = input("Enter your choice (1-5): ")
 
         if choice == "1":
-           title = input("Enter title: ")
+            title = input("Enter title: ")
             description = input("Enter description: ")
             due_date = input("Enter due date (YYYY-MM-DD): ")
             add_task(title, description, due_date)
 
-            elif choice == "2":
+        elif choice == "2":
             index = input("Enter task index/number to complete: ")
             mark_task_as_complete(index)
 
@@ -32,12 +32,13 @@ def main():
 
         elif choice == "4":
             calculate_progress()
-            
+
         elif choice == "5":
             print("Exiting the program...")
             break
+
         else:
             print("Invalid choice. Please try again.")
-        
+
 if __name__ == "__main__":
     main()
