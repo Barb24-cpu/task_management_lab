@@ -12,8 +12,20 @@ tasks = []
 
 # Implement add_task function
 def add_task(title, description, due_date):
-    None
+   def add_task(title, description, due_date):
+    if not validate_task_title(title) or not validate_task_description(description) or not validate_due_date(due_date):
+        print("Validation failed. Task not added.")
+        return False
+
+    task = {
+        "title": title.strip(),
+        "description": description.strip(),
+        "due_date": due_date.strip(),
+        "completed": False
+    }
+    tasks.append(task)
     print("Task added successfully!")
+    return True
     
 # Implement mark_task_as_complete function
 def mark_task_as_complete(index, tasks=tasks):
