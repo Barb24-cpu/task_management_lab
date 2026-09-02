@@ -1,7 +1,11 @@
 from datetime import datetime
 
 # Import validation functions
-None
+from task_manager.validation import (
+    validate_task_title,
+    validate_task_description,
+    validate_due_date
+)
 
 # Define tasks list
 tasks = []
