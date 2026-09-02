@@ -18,10 +18,21 @@ def main():
         choice = input("Enter your choice (1-5): ")
 
         if choice == "1":
-            None
-        None
-        None
-        None
+           title = input("Enter title: ")
+            description = input("Enter description: ")
+            due_date = input("Enter due date (YYYY-MM-DD): ")
+            add_task(title, description, due_date)
+
+            elif choice == "2":
+            index = input("Enter task index/number to complete: ")
+            mark_task_as_complete(index)
+
+        elif choice == "3":
+            view_pending_tasks()
+
+        elif choice == "4":
+            calculate_progress()
+            
         elif choice == "5":
             print("Exiting the program...")
             break
